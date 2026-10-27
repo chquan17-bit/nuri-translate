@@ -92,7 +92,7 @@ class WikiTranslationTests(unittest.TestCase):
         self.write("docs/wiki/Home-ko.md", "# 새 문서\n\n바뀐 문장입니다.\n")
         before = self.snapshot()
         translate = Mock(side_effect=lambda lines, language: fake_translate(lines, language) if language == "en" else [])
-        with self.assertRaises(wiki.TranslationError):
+        with self.assertRaisesRegex(wiki.TranslationError, "docs/wiki/Home-ko.md -> zh-CN"):
             wiki.synchronize(self.root, translate=translate)
         self.assertEqual(before, self.snapshot())
 
@@ -192,6 +192,19 @@ class WikiTranslationTests(unittest.TestCase):
         malformed["candidates"][0]["content"]["parts"][0]["text"] = "not JSON"
         with self.assertRaises(wiki.TranslationError):
             wiki.parse_response(malformed, ["첫째", "둘째"])
+
+    def test_structure_diagnostics_identify_segment_without_contents(self):
+        source = ["PRIVATE-SOURCE ⟦NURI_000000⟧ ⟦NURI_000001⟧"]
+        for target, reason in (
+            ("PRIVATE-RESULT\n⟦NURI_000000⟧ ⟦NURI_000001⟧", "line break"),
+            ("PRIVATE-RESULT ⟦NURI_000000⟧", "placeholder counts"),
+            ("PRIVATE-RESULT ⟦NURI_000001⟧ ⟦NURI_000000⟧", "reordered protected placeholders"),
+        ):
+            with self.subTest(reason=reason), self.assertRaises(wiki.TranslationError) as caught:
+                wiki.validate_segments(source, [target])
+            self.assertIn("segment s0000", str(caught.exception))
+            self.assertIn(reason, str(caught.exception))
+            self.assertNotIn("PRIVATE", str(caught.exception))
 
     def test_svg_batches_texts_and_preserves_geometry(self):
         source = '<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="700" aria-label="전체 구조"><rect x="20" y="30" width="250" height="90" fill="#fff"/><text x="40" y="55">하루 25회</text><text x="40" y="75"><tspan>요청 결과</tspan> 꼬리 설명</text></svg>'

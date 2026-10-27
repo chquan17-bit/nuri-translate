@@ -293,13 +293,23 @@ def parse_response(payload: dict, originals: list[str]) -> list[str]:
 def validate_segments(originals: list[str], translated: list[str]) -> None:
     if not isinstance(translated, list) or len(translated) != len(originals):
         raise TranslationError("Translation segment count changed")
-    for source, target in zip(originals, translated):
+    for index, (source, target) in enumerate(zip(originals, translated)):
+        segment = f"segment s{index:04d}"
         if not isinstance(target, str) or not target.strip() or len(target) > max(1000, len(source) * 8):
-            raise TranslationError("Empty or oversized translated segment")
-        if "\n" in target or "\r" in target or TOKEN_RE.findall(source) != TOKEN_RE.findall(target):
-            raise TranslationError("Translation changed protected structure")
+            raise TranslationError(f"Empty or oversized translated {segment}")
+        if "\n" in target or "\r" in target:
+            raise TranslationError(f"Translated {segment} introduced a line break")
+        expected, actual = TOKEN_RE.findall(source), TOKEN_RE.findall(target)
+        if Counter(expected) != Counter(actual):
+            missing = sum((Counter(expected) - Counter(actual)).values())
+            extra = sum((Counter(actual) - Counter(expected)).values())
+            raise TranslationError(f"Translated {segment} changed placeholder counts "
+                                   f"(expected {len(expected)}, got {len(actual)}, missing {missing}, extra {extra})")
+        if expected != actual:
+            raise TranslationError(f"Translated {segment} reordered protected placeholders "
+                                   f"(expected {len(expected)}, got {len(actual)})")
         if "⟦NURI_" in TOKEN_RE.sub("", target):
-            raise TranslationError("Translation contains an invalid placeholder")
+            raise TranslationError(f"Translated {segment} contains an invalid placeholder")
         # Models cannot introduce HTML, new links, code fences, or table cells.
         remainder = TOKEN_RE.sub("", target)
         if any(char in remainder for char in "<>`|[]*_~#") or re.match(r"^\s*(?:[-+]\s|\d+[.)]\s)", remainder):
@@ -406,7 +416,10 @@ def synchronize(root: Path, *, check: bool = False, seed: bool = False, translat
                     if translate is None:
                         translate = GeminiTranslator(os.environ.get("GEMINI_API_KEY", ""))
                     method = translate_svg if source.endswith(".svg") else translate_markdown
-                    current = method(text, source, language, sources, translate)
+                    try:
+                        current = method(text, source, language, sources, translate)
+                    except TranslationError as error:
+                        raise TranslationError(f"{source} -> {language}: {error}") from None
                     staged[relative] = current
             if current is not None:
                 targets[language] = {"path": relative, "sha256": digest(current)}
