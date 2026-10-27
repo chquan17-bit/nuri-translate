@@ -1,0 +1,8 @@
+# Explicit source-upload allowlist. Never upload Git, local state, or evidence.
+**
+!Dockerfile
+!.dockerignore
+!requirements-cloud.txt
+!cloudbuild.yaml
+!nuri/
+!nuri/*.py

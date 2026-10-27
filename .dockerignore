@@ -1,0 +1,6 @@
+# Runtime-only context, including Docker builds outside Cloud Build.
+**
+!Dockerfile
+!requirements-cloud.txt
+!nuri/
+!nuri/*.py

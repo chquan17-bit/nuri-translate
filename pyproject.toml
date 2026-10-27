@@ -1,0 +1,15 @@
+[project]
+name = "nuri-translate"
+version = "0.1.0"
+description = "Private Discord translation and English practice with Gemini"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "aiohttp==3.14.5",
+    "discord.py==2.7.1",
+    "google-auth==2.62.0",
+    "google-cloud-firestore==2.34.1",
+    "pynacl==1.6.2",
+]
+
+[tool.uv]
+package = false

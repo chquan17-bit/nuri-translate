@@ -1,0 +1,39 @@
+# Local environments, credentials, and runtime state.
+.venv/
+.state/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.dpapi
+secrets.xml
+credentials.json
+service-account*.json
+connection-status.json
+
+# Python and editor caches.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.idea/
+.vscode/
+
+# Local operational evidence; publish only generalized documentation.
+/CLOUD-RUN-*.md
+/DEBUG-*.md
+/LIVE-*.md
+/MOBILE-*.md
+/ROTATION-*.md
+/SELECTED-MESSAGE-*.md
+/*.jpg
+/*.jpeg
+/*.png
+/screenshots/
+/release-artifacts/
