@@ -370,6 +370,23 @@ def validate_segments(originals: list[str], translated: list[str]) -> None:
             raise TranslationError("Translation left Korean prose untranslated")
 
 
+def space_english_numbers(text: str, replacements: dict[str, str]) -> str:
+    """Separate generated English units from protected numbers, never code."""
+    def separate(match):
+        token = match.group(0)
+        number = replacements.get(token, "")
+        if not re.fullmatch(r"\d+(?:[.,]\d+)*", number):
+            return token
+        if number.isdigit():
+            value = int(number[-2:])
+            suffix = "th" if 10 < value % 100 < 14 else {1: "st", 2: "nd", 3: "rd"}.get(value % 10, "th")
+            if re.match(rf"{suffix}(?![A-Za-z])", text[match.end():], flags=re.I):
+                return token
+        return token + " "
+
+    return re.sub(TOKEN_RE.pattern + r"(?=[A-Za-z])", separate, text)
+
+
 def translate_lines(masked: MaskedText, language: str, translate: Callable) -> str:
     lines = masked.text.splitlines(keepends=True)
     selected = [i for i, line in enumerate(lines) if KOREAN_RE.search(line)]
@@ -391,6 +408,8 @@ def translate_lines(masked: MaskedText, language: str, translate: Callable) -> s
         translated = translate(originals, language)
         validate_segments(originals, translated)
         for index, value in zip(batch_indices, translated):
+            if language == "en":
+                value = space_english_numbers(value, masked.replacements)
             lines[index] = value + ("\n" if lines[index].endswith("\n") else "")
     return masked.restore("".join(lines))
 

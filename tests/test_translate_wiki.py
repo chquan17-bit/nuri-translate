@@ -230,6 +230,22 @@ class WikiTranslationTests(unittest.TestCase):
         masked = wiki.MaskedText(source[0], {"⟦NURI_000000⟧": "25", "⟦NURI_000001⟧": "3", "⟦NURI_000002⟧": "`command`"})
         self.assertEqual(masked.restore(translated), "Allow 25 requests per day; wait 3 seconds before running `command`.")
 
+    def test_generated_english_number_units_are_spaced_without_changing_code_or_ordinals(self):
+        source = "하루 25회, 동시 1개입니다. `25times`를 사용합니다.\n\n```python\nprint('25times')\n```\n"
+
+        def missing_spaces(lines, language):
+            return [line.replace("하루 ", "").replace("회, 동시 ", "times/day and ")
+                    .replace("개입니다. ", "concurrent model processing. ")
+                    .replace("를 사용합니다.", " is an example.") for line in lines]
+
+        result = wiki.translate_markdown(source, "docs/wiki/Home-ko.md", "en", {}, missing_spaces)
+        self.assertTrue(result.startswith("25 times/day and 1 concurrent model processing."))
+        self.assertIn("`25times`", result)
+        self.assertIn("```python\nprint('25times')\n```", result)
+        source = "순서: 1st, 2nd, 3rd, 4th, 11th, 12th, 13th, 21st.\n"
+        result = wiki.translate_markdown(source, "docs/wiki/Home-ko.md", "en", {}, fake_translate)
+        self.assertIn("1st, 2nd, 3rd, 4th, 11th, 12th, 13th, 21st", result)
+
     def test_prose_slots_cannot_erase_heading_or_warning_and_leave_only_tokens(self):
         source = ["⟦NURI_000000⟧중요한 경고 ⟦NURI_000001⟧입니다."]
         response = payload([])
