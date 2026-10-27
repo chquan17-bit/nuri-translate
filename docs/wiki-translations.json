@@ -70,15 +70,15 @@
       }
     },
     "docs/wiki/Home-ko.md": {
-      "source_sha256": "bc4320219381c7ca6e1416f18a60c39eaf2edbb2752b18ddcd0acb64cbd542aa",
+      "source_sha256": "fe8d1cfe7426cac105e822af334e686d10506924fb27dfe55c39781b30b62ee9",
       "targets": {
         "en": {
           "path": "docs/wiki/Home-en.md",
-          "sha256": "cb63498912150ab4dea1ea6e16406481f97abfdc76654a1545c14f573b7c84ca"
+          "sha256": "52728d8d9d52dd5be4698d4d635e7e9da22ae0918cbae3f1aedfb798e292f82d"
         },
         "zh-CN": {
           "path": "docs/wiki/Home-zh-CN.md",
-          "sha256": "8b4b5bce5caaf62e18fe93867b5df497d0504102b0ffac42ddc5156f0af4bb96"
+          "sha256": "fd279ef6f165089f1cb31daf94ed238eff7e6eb98a47098c4f5c0b80c3abcd64"
         }
       }
     },
