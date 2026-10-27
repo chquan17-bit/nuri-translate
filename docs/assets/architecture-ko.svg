@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1280 700" role="img" aria-label="Nuri · 요청 처리 구조">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="700" viewBox="0 0 1280 700" role="img" aria-label="Nuri · 요청 처리 구조">
 <rect x="0" y="0" width="1280" height="700" rx="0" fill="#F7F9FD"/>
 <text x="60" y="55" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="30" font-weight="700" text-anchor="start" fill="#172B4D">Nuri · 요청 처리 구조</text>
 <text x="60" y="86" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#53657E">빠른 수신과 긴 모델 처리를 분리하고, 사용량과 중복 상태를 공유합니다.</text>
