@@ -1,8 +1,8 @@
 {
   "version": 1,
   "model": "gemini-3.5-flash-lite",
-  "translator_version": 1,
-  "prompt_sha256": "cb1b507207fe795a2186818ea039b744ffe0e6741982e768a5006c38933f60ec",
+  "translator_version": 2,
+  "prompt_sha256": "4207b514ccdcd5148f390225b7542b841fdca3725abe5b624601a6d7739194a6",
   "sources": {
     "docs/assets/architecture-ko.svg": {
       "source_sha256": "8ed38ee45de1f8414bc8ab387f38bf446d0d2e722e85450b82953e391cd21634",

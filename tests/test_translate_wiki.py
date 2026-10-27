@@ -21,7 +21,7 @@ def fake_translate(lines, language):
 
 def payload(texts, finish="STOP"):
     return {"candidates": [{"finishReason": finish, "content": {"parts": [{"text": json.dumps({
-        "translations": [{"id": f"s{i:04d}", "text": text} for i, text in enumerate(texts)]})}]}}]}
+        "translations": {f"s{i:04d}.p0000": text for i, text in enumerate(texts)}})}]}}]}
 
 
 class WikiTranslationTests(unittest.TestCase):
@@ -180,9 +180,9 @@ class WikiTranslationTests(unittest.TestCase):
         good = payload(["One", "Two"])
         self.assertEqual(wiki.parse_response(good, ["첫째", "둘째"]), ["One", "Two"])
         for replacements in (
-            [{"id": "s0000", "text": "One"}, {"id": "s0000", "text": "Two"}],
-            [{"id": "s0000", "text": "One"}, {"id": "s0999", "text": "Two"}],
-            [{"id": "s0000", "text": "One"}, {"id": "s0001", "text": ""}],
+            {"s0000.p0000": "One"},
+            {"s0000.p0000": "One", "s0999.p0000": "Two"},
+            {"s0000.p0000": "One", "s0001.p0000": ""},
         ):
             bad = deepcopy(good)
             bad["candidates"][0]["content"]["parts"][0]["text"] = json.dumps({"translations": replacements})
@@ -192,6 +192,51 @@ class WikiTranslationTests(unittest.TestCase):
         malformed["candidates"][0]["content"]["parts"][0]["text"] = "not JSON"
         with self.assertRaises(wiki.TranslationError):
             wiki.parse_response(malformed, ["첫째", "둘째"])
+        duplicate = deepcopy(good)
+        duplicate["candidates"][0]["content"]["parts"][0]["text"] = '{"translations":{"s0000.p0000":"One","s0000.p0000":"Duplicate","s0001.p0000":"Two"}}'
+        with self.assertRaises(wiki.TranslationError):
+            wiki.parse_response(duplicate, ["첫째", "둘째"])
+
+    def test_prose_slots_reconstruct_tokens_locally_and_reject_hallucinated_tokens_or_slots(self):
+        source = ["⟦NURI_000158⟧최소 인스턴스 ⟦NURI_000159⟧을 유지하므로 Discord의 ⟦NURI_000160⟧초 제한을 넘길 수 있습니다."]
+        segments, requested, _ = wiki.prose_layout(source)
+        self.assertEqual(list(requested), ["s0000.p0001", "s0000.p0002", "s0000.p0003"])
+        self.assertEqual(segments[0]["context"], source[0])
+        translations = {"s0000.p0001": "保持最小实例数为 ", "s0000.p0002": " 时，可能超过 Discord 的 ", "s0000.p0003": " 秒限制。"}
+        response = payload([])
+        response["candidates"][0]["content"]["parts"][0]["text"] = json.dumps({"translations": translations})
+        result = wiki.parse_response(response, source)
+        self.assertEqual(wiki.TOKEN_RE.findall(result[0]), wiki.TOKEN_RE.findall(source[0]))
+        self.assertTrue(result[0].startswith("⟦NURI_000158⟧"))
+        for bad in (
+            {**translations, "s0000.p0003": " 秒限制。⟦NURI_000157⟧"},
+            {**translations, "s0000.p0003": " 秒限制。⟦NURI_000160⟧"},
+            {**translations, "s0000.p0000": "extra before the blockquote"},
+        ):
+            response["candidates"][0]["content"]["parts"][0]["text"] = json.dumps({"translations": bad})
+            with self.assertRaises(wiki.TranslationError):
+                wiki.parse_response(response, source)
+
+    def test_prose_slots_allow_natural_english_spacing_around_fixed_numbers_and_code(self):
+        source = ["하루 ⟦NURI_000000⟧회, ⟦NURI_000001⟧초 대기 후 ⟦NURI_000002⟧를 실행합니다."]
+        response = payload([])
+        response["candidates"][0]["content"]["parts"][0]["text"] = json.dumps({"translations": {
+            "s0000.p0000": "Allow ",
+            "s0000.p0001": " requests per day; wait ",
+            "s0000.p0002": " seconds before running ",
+            "s0000.p0003": ".",
+        }})
+        translated = wiki.parse_response(response, source)[0]
+        masked = wiki.MaskedText(source[0], {"⟦NURI_000000⟧": "25", "⟦NURI_000001⟧": "3", "⟦NURI_000002⟧": "`command`"})
+        self.assertEqual(masked.restore(translated), "Allow 25 requests per day; wait 3 seconds before running `command`.")
+
+    def test_prose_slots_cannot_erase_heading_or_warning_and_leave_only_tokens(self):
+        source = ["⟦NURI_000000⟧중요한 경고 ⟦NURI_000001⟧입니다."]
+        response = payload([])
+        response["candidates"][0]["content"]["parts"][0]["text"] = json.dumps({"translations": {
+            "s0000.p0001": " ", "s0000.p0002": ""}})
+        with self.assertRaisesRegex(wiki.TranslationError, "omitted all prose"):
+            wiki.parse_response(response, source)
 
     def test_structure_diagnostics_identify_segment_without_contents(self):
         source = ["PRIVATE-SOURCE ⟦NURI_000000⟧ ⟦NURI_000001⟧"]
