@@ -1,0 +1,25 @@
+sequenceDiagram
+    participant D as Discord
+    participant I as ingress
+    participant Q as Cloud Tasks
+    participant W as worker
+    participant F as Firestore
+    participant G as Gemini
+    D->>I: 带签名的 interaction
+    I->>I: 校验签名、应用、所有者与输入
+    I->>Q: 使用确定性的 task ID 注册
+    Q-->>I: 注册结果
+    I-->>D: ephemeral 延迟响应
+    Q->>W: 经 OIDC 认证的任务
+    W->>F: 预约请求并检查限额
+    alt 已预约的 interaction
+        F-->>W: 重复请求
+        W-->>Q: 返回成功，不再调用模型
+    else 新请求
+        F-->>W: 增加次数并设置租约
+        W->>G: 发出一次生成请求
+        G-->>W: 结构化结果
+        W->>D: 修改原来的个人响应
+        W->>F: 标记完成并释放租约
+        W-->>Q: 处理完成
+    end

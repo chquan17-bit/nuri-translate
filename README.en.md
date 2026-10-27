@@ -30,15 +30,7 @@ Combined input is limited to 3,000 characters; practice sentences to 1,000. Shor
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    D["Discord<br/>Selected message · /nuri"] --> I["Public ingress<br/>Signature · time · app · user checks"]
-    I --> Q["Cloud Tasks<br/>OIDC authentication"]
-    Q --> W["Private worker<br/>Translation · practice"]
-    W <--> F[("Firestore<br/>Limits · deduplication")]
-    W --> G["Gemini"]
-    W --> R["Private Discord reply<br/>Requester only"]
-```
+![Nuri architecture from Discord interactions to private translation results](docs/assets/architecture-en.svg)
 
 Cloud Run is the primary runtime, independent of the user's PC. A Windows Gateway runner is retained for recovery.
 

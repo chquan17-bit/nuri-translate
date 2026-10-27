@@ -1,0 +1,25 @@
+sequenceDiagram
+    participant D as Discord
+    participant I as ingress
+    participant Q as Cloud Tasks
+    participant W as worker
+    participant F as Firestore
+    participant G as Gemini
+    D->>I: Signed interaction
+    I->>I: Verify signature, app, owner, and input
+    I->>Q: Enqueue with a deterministic task ID
+    Q-->>I: Enqueue result
+    I-->>D: Ephemeral deferred response
+    Q->>W: Deliver task with OIDC authentication
+    W->>F: Reserve request and check limits
+    alt Interaction already reserved
+        F-->>W: Duplicate
+        W-->>Q: Acknowledge success without another model call
+    else New request
+        F-->>W: Increment count and acquire lease
+        W->>G: One generation request
+        G-->>W: Structured result
+        W->>D: Edit original private response
+        W->>F: Mark finished and release lease
+        W-->>Q: Processing complete
+    end

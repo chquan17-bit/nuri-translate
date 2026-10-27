@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1280 700" role="img" aria-label="Nuri · Request architecture">
+<rect x="0" y="0" width="1280" height="700" rx="0" fill="#F7F9FD"/>
+<text x="60" y="55" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="30" font-weight="700" text-anchor="start" fill="#172B4D">Nuri · Request architecture</text>
+<text x="60" y="86" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#53657E">Acknowledge quickly, process separately, and share usage and duplicate-prevention state.</text>
+<line x1="1080" y1="170" x2="1080" y2="126" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="1080" y1="126" x2="180" y2="126" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="180" y1="126" x2="180" y2="170" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="180" y1="170" x2="175.69" y2="162.1" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="180" y1="170" x2="184.31" y2="162.1" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="448.425" y="97" width="363.15" height="27" rx="4" fill="#F7F9FD"/>
+<text x="630" y="119" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">Edit or extend the private response</text>
+<line x1="300" y1="230" x2="360" y2="230" stroke="#275DCA" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="360" y1="230" x2="352.1" y2="234.31" stroke="#275DCA" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="360" y1="230" x2="352.1" y2="225.69" stroke="#275DCA" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="600" y1="230" x2="660" y2="230" stroke="#275DCA" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="660" y1="230" x2="652.1" y2="234.31" stroke="#275DCA" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="660" y1="230" x2="652.1" y2="225.69" stroke="#275DCA" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="900" y1="230" x2="960" y2="230" stroke="#275DCA" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="960" y1="230" x2="952.1" y2="234.31" stroke="#275DCA" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="960" y1="230" x2="952.1" y2="225.69" stroke="#275DCA" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="480" y1="290" x2="480" y2="357" stroke="#275DCA" stroke-width="2.1" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="480" y1="357" x2="180" y2="357" stroke="#275DCA" stroke-width="2.1" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="180" y1="357" x2="180" y2="290" stroke="#275DCA" stroke-width="2.1" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="180" y1="290" x2="184.31" y2="297.9" stroke="#275DCA" stroke-width="2.1" stroke-linecap="round"/>
+<line x1="180" y1="290" x2="175.69" y2="297.9" stroke="#275DCA" stroke-width="2.1" stroke-linecap="round"/>
+<rect x="196.875" y="327" width="266.25" height="27" rx="4" fill="#F7F9FD"/>
+<text x="330" y="349" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">Private deferred response</text>
+<line x1="1015" y1="290" x2="1015" y2="415" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="1015" y1="415" x2="780" y2="415" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="780" y1="415" x2="780" y2="470" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="780" y1="470" x2="775.69" y2="462.1" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="780" y1="470" x2="784.31" y2="462.1" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="1015" y1="290" x2="1019.31" y2="297.9" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="1015" y1="290" x2="1010.69" y2="297.9" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="692.08" y="384" width="315.84" height="26" rx="4" fill="#F7F9FD"/>
+<text x="850" y="405" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#53657E">Reserve · limits · deduplication</text>
+<line x1="1080" y1="290" x2="1080" y2="470" stroke="#275DCA" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="1080" y1="470" x2="1075.69" y2="462.1" stroke="#275DCA" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="1080" y1="470" x2="1084.31" y2="462.1" stroke="#275DCA" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="1150" y1="470" x2="1150" y2="290" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="1150" y1="290" x2="1154.31" y2="297.9" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="1150" y1="290" x2="1145.69" y2="297.9" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="1043.72" y="330" width="142.56" height="47" rx="4" fill="#F7F9FD"/>
+<text x="1115" y="351" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#53657E">Selected text</text>
+<text x="1115" y="372" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#53657E">Model result</text>
+<rect x="60" y="170" width="240" height="120" rx="12" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<rect x="60" y="170" width="6" height="120" rx="3" fill="#275DCA"/>
+<text x="84" y="206" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#172B4D">Discord</text>
+<text x="84" y="238" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">Selected or entered text</text>
+<rect x="360" y="170" width="240" height="120" rx="12" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<rect x="360" y="170" width="6" height="120" rx="3" fill="#275DCA"/>
+<text x="384" y="206" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#172B4D">Public ingress</text>
+<text x="384" y="238" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">Verify signature, app, owner</text>
+<text x="384" y="263" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">Fast acknowledgement</text>
+<rect x="660" y="170" width="240" height="120" rx="12" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<rect x="660" y="170" width="6" height="120" rx="3" fill="#275DCA"/>
+<text x="684" y="206" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#172B4D">Cloud Tasks</text>
+<text x="684" y="238" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">Stable task ID</text>
+<text x="684" y="263" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">OIDC-authenticated delivery</text>
+<rect x="960" y="170" width="240" height="120" rx="12" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<rect x="960" y="170" width="6" height="120" rx="3" fill="#087F8C"/>
+<text x="984" y="206" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#172B4D">Private worker</text>
+<text x="984" y="238" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">Reserve → generate → reply</text>
+<text x="984" y="263" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">IAM-restricted access</text>
+<rect x="660" y="470" width="240" height="120" rx="12" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<rect x="660" y="470" width="6" height="120" rx="3" fill="#087F8C"/>
+<text x="684" y="506" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#172B4D">Firestore</text>
+<text x="684" y="538" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">Daily limits · shared lease</text>
+<text x="684" y="563" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">Hash-based deduplication</text>
+<rect x="960" y="470" width="240" height="120" rx="12" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<rect x="960" y="470" width="6" height="120" rx="3" fill="#087F8C"/>
+<text x="984" y="506" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#172B4D">Gemini API</text>
+<text x="984" y="538" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">Generate from selected text</text>
+<text x="984" y="563" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">No automatic model retries</text>
+<line x1="60" y1="468" x2="60" y2="576" stroke="#275DCA" stroke-width="4" stroke-linecap="round"/>
+<text x="82" y="490" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#53657E">Only explicitly selected input</text>
+<text x="82" y="522" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#53657E">Results visible to the requester</text>
+<text x="82" y="554" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#53657E">Queue temporarily holds text and reply token</text>
+<line x1="60" y1="635" x2="1200" y2="635" stroke="#D7E1EE" stroke-width="1" stroke-linecap="round"/>
+<text x="60" y="667" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" text-anchor="start" fill="#53657E">PUBLIC ENTRY  /  PRIVATE EXECUTION  /  SHARED USAGE CONTROL</text>
+</svg>

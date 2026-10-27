@@ -1,0 +1,10 @@
+flowchart LR
+    U[Discord 用户] --> D[Discord interaction]
+    D --> I[公开 ingress]
+    I -->|签名、应用、所有者校验| Q[Cloud Tasks]
+    I -->|仅请求者可见的等待响应| D
+    Q -->|OIDC · IAM| W[私有 worker]
+    W <-->|预约、限额、防止重复| F[(Firestore)]
+    W -->|所选文本| G[Gemini API]
+    G --> W
+    W -->|修改或追加个人响应| D

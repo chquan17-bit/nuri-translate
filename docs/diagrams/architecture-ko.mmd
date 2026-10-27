@@ -1,0 +1,10 @@
+flowchart LR
+    U[Discord 사용자] --> D[Discord interaction]
+    D --> I[공개 ingress]
+    I -->|서명·앱·소유자 검증| Q[Cloud Tasks]
+    I -->|비공개 처리 중 응답| D
+    Q -->|OIDC · IAM| W[비공개 worker]
+    W <-->|예약·한도·중복 방지| F[(Firestore)]
+    W -->|선택한 텍스트| G[Gemini API]
+    G --> W
+    W -->|개인 응답 수정·추가| D

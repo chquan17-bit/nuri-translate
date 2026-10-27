@@ -6,18 +6,7 @@
 
 ## 整体结构
 
-```mermaid
-flowchart LR
-    U[Discord 用户] --> D[Discord interaction]
-    D --> I[公开 ingress]
-    I -->|签名、应用、所有者校验| Q[Cloud Tasks]
-    I -->|仅请求者可见的等待响应| D
-    Q -->|OIDC · IAM| W[私有 worker]
-    W <-->|预约、限额、防止重复| F[(Firestore)]
-    W -->|所选文本| G[Gemini API]
-    G --> W
-    W -->|修改或追加个人响应| D
-```
+![从 Discord 请求到私有翻译结果的 Nuri 系统架构](../assets/architecture-zh-CN.svg)
 
 ## 组件职责
 
@@ -33,33 +22,7 @@ flowchart LR
 
 ## 一次请求的生命周期
 
-```mermaid
-sequenceDiagram
-    participant D as Discord
-    participant I as ingress
-    participant Q as Cloud Tasks
-    participant W as worker
-    participant F as Firestore
-    participant G as Gemini
-    D->>I: 带签名的 interaction
-    I->>I: 校验签名、应用、所有者与输入
-    I->>Q: 使用确定性的 task ID 注册
-    Q-->>I: 注册结果
-    I-->>D: ephemeral 延迟响应
-    Q->>W: 经 OIDC 认证的任务
-    W->>F: 预约请求并检查限额
-    alt 已预约的 interaction
-        F-->>W: 重复请求
-        W-->>Q: 返回成功，不再调用模型
-    else 新请求
-        F-->>W: 增加次数并设置租约
-        W->>G: 发出一次生成请求
-        G-->>W: 结构化结果
-        W->>D: 修改原来的个人响应
-        W->>F: 标记完成并释放租约
-        W-->>Q: 处理完成
-    end
-```
+![包含签名验证、任务投递、去重和私有结果的 Nuri 请求时序](../assets/sequence-zh-CN.svg)
 
 Cloud Tasks 会设置短暂的投递延迟，减少 worker 在 Discord 初始响应返回之前就尝试修改结果的竞争。队列注册流程的总时间限制为 2.3 秒，但这不能消除 Cloud Run 实例启动所需的时间。
 

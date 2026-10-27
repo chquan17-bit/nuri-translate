@@ -6,18 +6,7 @@
 
 ## 전체 구조
 
-```mermaid
-flowchart LR
-    U[Discord 사용자] --> D[Discord interaction]
-    D --> I[공개 ingress]
-    I -->|서명·앱·소유자 검증| Q[Cloud Tasks]
-    I -->|비공개 처리 중 응답| D
-    Q -->|OIDC · IAM| W[비공개 worker]
-    W <-->|예약·한도·중복 방지| F[(Firestore)]
-    W -->|선택한 텍스트| G[Gemini API]
-    G --> W
-    W -->|개인 응답 수정·추가| D
-```
+![디스코드 요청부터 비공개 번역 결과까지의 Nuri 전체 구조](../assets/architecture-ko.svg)
 
 ## 구성 요소
 
@@ -33,33 +22,7 @@ flowchart LR
 
 ## 한 요청의 생명주기
 
-```mermaid
-sequenceDiagram
-    participant D as Discord
-    participant I as ingress
-    participant Q as Cloud Tasks
-    participant W as worker
-    participant F as Firestore
-    participant G as Gemini
-    D->>I: 서명된 interaction
-    I->>I: 서명·앱·소유자·입력 확인
-    I->>Q: 결정적인 task ID로 등록
-    Q-->>I: 등록 결과
-    I-->>D: ephemeral 지연 응답
-    Q->>W: OIDC 인증된 작업 전달
-    W->>F: 요청 예약과 한도 확인
-    alt 이미 예약된 interaction
-        F-->>W: 중복
-        W-->>Q: 성공 처리 · 모델 재호출 없음
-    else 새 요청
-        F-->>W: 횟수 증가 · lease 설정
-        W->>G: 생성 요청 1회
-        G-->>W: 구조화 결과
-        W->>D: 원래 개인 응답 수정
-        W->>F: 완료 표시 · lease 해제
-        W-->>Q: 처리 완료
-    end
-```
+![서명 검증, 작업 등록, 중복 방지와 결과 전달을 보여주는 Nuri 요청 순서](../assets/sequence-ko.svg)
 
 Cloud Tasks에는 짧은 전달 지연을 두어 최초 Discord 응답 전에 worker가 결과를 수정하는 경합을 줄입니다. 대기열 등록 경로는 전체 2.3초로 제한하지만, Cloud Run 인스턴스 시작 시간까지 없애지는 못합니다.
 

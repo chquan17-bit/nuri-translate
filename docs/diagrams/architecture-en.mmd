@@ -1,0 +1,10 @@
+flowchart LR
+    U[Discord user] --> D[Discord interaction]
+    D --> I[Public ingress]
+    I -->|Verify signature, app, and owner| Q[Cloud Tasks]
+    I -->|Private deferred response| D
+    Q -->|OIDC and IAM| W[Private worker]
+    W <-->|Reservation, limits, deduplication| F[(Firestore)]
+    W -->|Selected text| G[Gemini API]
+    G --> W
+    W -->|Edit or extend private response| D

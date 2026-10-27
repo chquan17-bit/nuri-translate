@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1280 1450" role="img" aria-label="Nuri · Request lifecycle">
+<rect x="0" y="0" width="1280" height="1450" rx="0" fill="#F7F9FD"/>
+<text x="60" y="54" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="30" font-weight="700" text-anchor="start" fill="#172B4D">Nuri · Request lifecycle</text>
+<text x="60" y="86" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#53657E">Reserve before calling the model. A reserved interaction never triggers another generation.</text>
+<rect x="450" y="652" width="750" height="220" rx="12" fill="#EFF3F9" stroke="#D7E1EE" stroke-width="1.4"/>
+<text x="473" y="683" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#53657E">BRANCH A · ALREADY RESERVED</text>
+<rect x="60" y="902" width="1140" height="460" rx="12" fill="#ECF7F7" stroke="#C3E1E2" stroke-width="1.4"/>
+<text x="83" y="933" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#087F8C">BRANCH B · NEW REQUEST</text>
+<line x1="140" y1="170" x2="140" y2="1375" stroke="#BCC9DA" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 6"/>
+<rect x="62" y="120" width="156" height="50" rx="9" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<text x="140" y="151" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#275DCA">Discord</text>
+<line x1="340" y1="170" x2="340" y2="1375" stroke="#BCC9DA" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 6"/>
+<rect x="262" y="120" width="156" height="50" rx="9" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<text x="340" y="151" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#275DCA">ingress</text>
+<line x1="540" y1="170" x2="540" y2="1375" stroke="#BCC9DA" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 6"/>
+<rect x="462" y="120" width="156" height="50" rx="9" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<text x="540" y="151" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#275DCA">Cloud Tasks</text>
+<line x1="740" y1="170" x2="740" y2="1375" stroke="#BCC9DA" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 6"/>
+<rect x="662" y="120" width="156" height="50" rx="9" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<text x="740" y="151" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#087F8C">worker</text>
+<line x1="940" y1="170" x2="940" y2="1375" stroke="#BCC9DA" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 6"/>
+<rect x="862" y="120" width="156" height="50" rx="9" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<text x="940" y="151" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#087F8C">Firestore</text>
+<line x1="1140" y1="170" x2="1140" y2="1375" stroke="#BCC9DA" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 6"/>
+<rect x="1062" y="120" width="156" height="50" rx="9" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<text x="1140" y="151" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#087F8C">Gemini</text>
+<line x1="140" y1="217" x2="340" y2="217" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="340" y1="217" x2="332.1" y2="221.31" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="340" y1="217" x2="332.1" y2="212.69" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<rect x="140.79000000000002" y="181" width="198.42" height="27" rx="4" fill="#F7F9FD"/>
+<text x="240.0" y="203" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">Signed interaction</text>
+<line x1="340" y1="260" x2="425" y2="260" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="425" y1="260" x2="425" y2="307" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="425" y1="307" x2="340" y2="307" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="340" y1="307" x2="347.9" y2="302.69" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="340" y1="307" x2="347.9" y2="311.31" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<rect x="439" y="254" width="224" height="58" rx="5" fill="#F7F9FD"/>
+<text x="451" y="277" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#53657E">Verify signature, app,</text>
+<text x="451" y="299" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#53657E">owner, and input</text>
+<line x1="340" y1="365" x2="540" y2="365" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="540" y1="365" x2="532.1" y2="369.31" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="540" y1="365" x2="532.1" y2="360.69" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<rect x="287.495" y="329" width="305.01" height="27" rx="4" fill="#F7F9FD"/>
+<text x="440.0" y="351" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">Enqueue with a stable task ID</text>
+<line x1="540" y1="435" x2="340" y2="435" stroke="#087F8C" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="340" y1="435" x2="347.9" y2="430.69" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<line x1="340" y1="435" x2="347.9" y2="439.31" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<rect x="360.17" y="399" width="159.66" height="27" rx="4" fill="#F7F9FD"/>
+<text x="440.0" y="421" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">Enqueue result</text>
+<line x1="340" y1="505" x2="140" y2="505" stroke="#087F8C" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="140" y1="505" x2="147.9" y2="500.69" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<line x1="140" y1="505" x2="147.9" y2="509.31" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<rect x="97.185" y="469" width="285.63" height="27" rx="4" fill="#F7F9FD"/>
+<text x="240.0" y="491" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">Ephemeral deferred response</text>
+<line x1="540" y1="575" x2="740" y2="575" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="740" y1="575" x2="732.1" y2="579.31" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="740" y1="575" x2="732.1" y2="570.69" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<rect x="497.185" y="539" width="285.63" height="27" rx="4" fill="#F7F9FD"/>
+<text x="640.0" y="561" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">OIDC-authenticated delivery</text>
+<line x1="740" y1="635" x2="940" y2="635" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="940" y1="635" x2="932.1" y2="639.31" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="940" y1="635" x2="932.1" y2="630.69" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<rect x="682.65" y="599" width="314.7" height="27" rx="4" fill="#F7F9FD"/>
+<text x="840.0" y="621" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">Reserve request · check limits</text>
+<line x1="940" y1="736" x2="740" y2="736" stroke="#087F8C" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="740" y1="736" x2="747.9" y2="731.69" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<line x1="740" y1="736" x2="747.9" y2="740.31" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<rect x="784.395" y="700" width="111.21" height="27" rx="4" fill="#EFF3F9"/>
+<text x="840.0" y="722" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">Duplicate</text>
+<line x1="740" y1="827" x2="540" y2="827" stroke="#087F8C" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="540" y1="827" x2="547.9" y2="822.69" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<line x1="540" y1="827" x2="547.9" y2="831.31" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<rect x="526.255" y="769" width="227.48999999999998" height="49" rx="4" fill="#EFF3F9"/>
+<text x="640.0" y="791" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">Acknowledge success</text>
+<text x="640.0" y="813" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">No further model call</text>
+<line x1="940" y1="983" x2="740" y2="983" stroke="#087F8C" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="740" y1="983" x2="747.9" y2="978.69" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<line x1="740" y1="983" x2="747.9" y2="987.31" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<rect x="677.8050000000001" y="947" width="324.39" height="27" rx="4" fill="#ECF7F7"/>
+<text x="840.0" y="969" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">Increment count · acquire lease</text>
+<line x1="740" y1="1053" x2="1140" y2="1053" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="1140" y1="1053" x2="1132.1" y2="1057.31" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="1140" y1="1053" x2="1132.1" y2="1048.69" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<rect x="821.41" y="1017" width="237.17999999999998" height="27" rx="4" fill="#ECF7F7"/>
+<text x="940.0" y="1039" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">One generation request</text>
+<line x1="1140" y1="1123" x2="740" y2="1123" stroke="#087F8C" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="740" y1="1123" x2="747.9" y2="1118.69" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<line x1="740" y1="1123" x2="747.9" y2="1127.31" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<rect x="845.635" y="1087" width="188.73" height="27" rx="4" fill="#ECF7F7"/>
+<text x="940.0" y="1109" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">Structured result</text>
+<line x1="740" y1="1193" x2="140" y2="1193" stroke="#087F8C" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="140" y1="1193" x2="147.9" y2="1188.69" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<line x1="140" y1="1193" x2="147.9" y2="1197.31" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<rect x="282.65" y="1157" width="314.7" height="27" rx="4" fill="#ECF7F7"/>
+<text x="440.0" y="1179" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">Edit original private response</text>
+<line x1="740" y1="1263" x2="940" y2="1263" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="940" y1="1263" x2="932.1" y2="1267.31" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="940" y1="1263" x2="932.1" y2="1258.69" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<rect x="687.495" y="1227" width="305.01" height="27" rx="4" fill="#ECF7F7"/>
+<text x="840.0" y="1249" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">Mark finished · release lease</text>
+<line x1="740" y1="1333" x2="540" y2="1333" stroke="#087F8C" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="540" y1="1333" x2="547.9" y2="1328.69" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<line x1="540" y1="1333" x2="547.9" y2="1337.31" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<rect x="535.945" y="1297" width="208.10999999999999" height="27" rx="4" fill="#ECF7F7"/>
+<text x="640.0" y="1319" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">Processing complete</text>
+<text x="60" y="1418" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">Only one branch executes. See the accompanying text for errors and timeout policies.</text>
+</svg>

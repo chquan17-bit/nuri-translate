@@ -30,15 +30,7 @@ Nuri 会合并消息正文与 embed 卡片的标题、描述和字段内容。�
 
 ## 运行结构
 
-```mermaid
-flowchart LR
-    D["Discord<br/>所选消息 · /nuri"] --> I["公开 ingress<br/>验证签名 · 时间 · 应用 · 用户"]
-    I --> Q["Cloud Tasks<br/>OIDC 身份验证"]
-    Q --> W["私有 worker<br/>翻译 · 练习"]
-    W <--> F[("Firestore<br/>额度 · 去重")]
-    W --> G["Gemini"]
-    W --> R["Discord 私有回复<br/>仅请求者可见"]
-```
+![从 Discord 请求到私有翻译结果的 Nuri 系统架构](docs/assets/architecture-zh-CN.svg)
 
 默认通过 Cloud Run 运行，不依赖用户的电脑持续开机。Windows Gateway 启动器保留作为恢复方式。
 

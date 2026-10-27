@@ -6,18 +6,7 @@
 
 ## System overview
 
-```mermaid
-flowchart LR
-    U[Discord user] --> D[Discord interaction]
-    D --> I[Public ingress]
-    I -->|Verify signature, app, and owner| Q[Cloud Tasks]
-    I -->|Private deferred response| D
-    Q -->|OIDC and IAM| W[Private worker]
-    W <-->|Reservation, limits, deduplication| F[(Firestore)]
-    W -->|Selected text| G[Gemini API]
-    G --> W
-    W -->|Edit or extend private response| D
-```
+![Nuri architecture from Discord interactions to private translation results](../assets/architecture-en.svg)
 
 ## Components
 
@@ -33,33 +22,7 @@ flowchart LR
 
 ## Request lifecycle
 
-```mermaid
-sequenceDiagram
-    participant D as Discord
-    participant I as ingress
-    participant Q as Cloud Tasks
-    participant W as worker
-    participant F as Firestore
-    participant G as Gemini
-    D->>I: Signed interaction
-    I->>I: Verify signature, app, owner, and input
-    I->>Q: Enqueue with a deterministic task ID
-    Q-->>I: Enqueue result
-    I-->>D: Ephemeral deferred response
-    Q->>W: Deliver task with OIDC authentication
-    W->>F: Reserve request and check limits
-    alt Interaction already reserved
-        F-->>W: Duplicate
-        W-->>Q: Acknowledge success without another model call
-    else New request
-        F-->>W: Increment count and acquire lease
-        W->>G: One generation request
-        G-->>W: Structured result
-        W->>D: Edit original private response
-        W->>F: Mark finished and release lease
-        W-->>Q: Processing complete
-    end
-```
+![Nuri request sequence with signature validation, task delivery, deduplication, and private results](../assets/sequence-en.svg)
 
 A short Cloud Tasks delivery delay reduces the chance that the worker edits the result before Discord receives the initial response. The entire enqueue path is bounded to 2.3 seconds, but this does not eliminate Cloud Run instance startup time.
 

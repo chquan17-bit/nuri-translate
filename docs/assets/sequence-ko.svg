@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1280 1450" role="img" aria-label="Nuri · 한 요청의 생명주기">
+<rect x="0" y="0" width="1280" height="1450" rx="0" fill="#F7F9FD"/>
+<text x="60" y="54" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="30" font-weight="700" text-anchor="start" fill="#172B4D">Nuri · 한 요청의 생명주기</text>
+<text x="60" y="86" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#53657E">모델 호출 전에 요청을 예약합니다. 이미 예약된 interaction은 다시 생성하지 않습니다.</text>
+<rect x="450" y="652" width="750" height="220" rx="12" fill="#EFF3F9" stroke="#D7E1EE" stroke-width="1.4"/>
+<text x="473" y="683" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#53657E">분기 A · 이미 예약된 interaction</text>
+<rect x="60" y="902" width="1140" height="460" rx="12" fill="#ECF7F7" stroke="#C3E1E2" stroke-width="1.4"/>
+<text x="83" y="933" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#087F8C">분기 B · 새 요청</text>
+<line x1="140" y1="170" x2="140" y2="1375" stroke="#BCC9DA" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 6"/>
+<rect x="62" y="120" width="156" height="50" rx="9" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<text x="140" y="151" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#275DCA">Discord</text>
+<line x1="340" y1="170" x2="340" y2="1375" stroke="#BCC9DA" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 6"/>
+<rect x="262" y="120" width="156" height="50" rx="9" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<text x="340" y="151" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#275DCA">ingress</text>
+<line x1="540" y1="170" x2="540" y2="1375" stroke="#BCC9DA" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 6"/>
+<rect x="462" y="120" width="156" height="50" rx="9" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<text x="540" y="151" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#275DCA">Cloud Tasks</text>
+<line x1="740" y1="170" x2="740" y2="1375" stroke="#BCC9DA" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 6"/>
+<rect x="662" y="120" width="156" height="50" rx="9" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<text x="740" y="151" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#087F8C">worker</text>
+<line x1="940" y1="170" x2="940" y2="1375" stroke="#BCC9DA" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 6"/>
+<rect x="862" y="120" width="156" height="50" rx="9" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<text x="940" y="151" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#087F8C">Firestore</text>
+<line x1="1140" y1="170" x2="1140" y2="1375" stroke="#BCC9DA" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 6"/>
+<rect x="1062" y="120" width="156" height="50" rx="9" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<text x="1140" y="151" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#087F8C">Gemini</text>
+<line x1="140" y1="217" x2="340" y2="217" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="340" y1="217" x2="332.1" y2="221.31" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="340" y1="217" x2="332.1" y2="212.69" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<rect x="144.36" y="181" width="191.28" height="27" rx="4" fill="#F7F9FD"/>
+<text x="240.0" y="203" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">서명된 interaction</text>
+<line x1="340" y1="260" x2="425" y2="260" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="425" y1="260" x2="425" y2="307" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="425" y1="307" x2="340" y2="307" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="340" y1="307" x2="347.9" y2="302.69" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="340" y1="307" x2="347.9" y2="311.31" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<rect x="439" y="254" width="224" height="58" rx="5" fill="#F7F9FD"/>
+<text x="451" y="277" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#53657E">서명 · 앱 · 소유자</text>
+<text x="451" y="299" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#53657E">입력 확인</text>
+<line x1="340" y1="365" x2="540" y2="365" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="540" y1="365" x2="532.1" y2="369.31" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="540" y1="365" x2="532.1" y2="360.69" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<rect x="324.895" y="329" width="230.20999999999998" height="27" rx="4" fill="#F7F9FD"/>
+<text x="440.0" y="351" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">결정적인 task ID로 등록</text>
+<line x1="540" y1="435" x2="340" y2="435" stroke="#087F8C" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="340" y1="435" x2="347.9" y2="430.69" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<line x1="340" y1="435" x2="347.9" y2="439.31" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<rect x="389.155" y="399" width="101.69" height="27" rx="4" fill="#F7F9FD"/>
+<text x="440.0" y="421" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">등록 결과</text>
+<line x1="340" y1="505" x2="140" y2="505" stroke="#087F8C" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="140" y1="505" x2="147.9" y2="500.69" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<line x1="140" y1="505" x2="147.9" y2="509.31" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<rect x="140.705" y="469" width="198.58999999999997" height="27" rx="4" fill="#F7F9FD"/>
+<text x="240.0" y="491" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">ephemeral 지연 응답</text>
+<line x1="540" y1="575" x2="740" y2="575" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="740" y1="575" x2="732.1" y2="579.31" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="740" y1="575" x2="732.1" y2="570.69" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<rect x="534.585" y="539" width="210.82999999999998" height="27" rx="4" fill="#F7F9FD"/>
+<text x="640.0" y="561" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">OIDC 인증된 작업 전달</text>
+<line x1="740" y1="635" x2="940" y2="635" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="940" y1="635" x2="932.1" y2="639.31" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="940" y1="635" x2="932.1" y2="630.69" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<rect x="735.775" y="599" width="208.45" height="27" rx="4" fill="#F7F9FD"/>
+<text x="840.0" y="621" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">요청 예약 · 한도 확인</text>
+<line x1="940" y1="736" x2="740" y2="736" stroke="#087F8C" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="740" y1="736" x2="747.9" y2="731.69" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<line x1="740" y1="736" x2="747.9" y2="740.31" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<rect x="811.0" y="700" width="58" height="27" rx="4" fill="#EFF3F9"/>
+<text x="840.0" y="722" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">중복</text>
+<line x1="740" y1="827" x2="540" y2="827" stroke="#087F8C" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="540" y1="827" x2="547.9" y2="822.69" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<line x1="540" y1="827" x2="547.9" y2="831.31" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<rect x="558.81" y="769" width="162.38" height="49" rx="4" fill="#EFF3F9"/>
+<text x="640.0" y="791" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">성공 처리</text>
+<text x="640.0" y="813" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">모델 재호출 없음</text>
+<line x1="940" y1="983" x2="740" y2="983" stroke="#087F8C" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="740" y1="983" x2="747.9" y2="978.69" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<line x1="740" y1="983" x2="747.9" y2="987.31" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<rect x="728.55" y="947" width="222.9" height="27" rx="4" fill="#ECF7F7"/>
+<text x="840.0" y="969" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">횟수 증가 · lease 설정</text>
+<line x1="740" y1="1053" x2="1140" y2="1053" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="1140" y1="1053" x2="1132.1" y2="1057.31" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="1140" y1="1053" x2="1132.1" y2="1048.69" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<rect x="870.965" y="1017" width="138.07" height="27" rx="4" fill="#ECF7F7"/>
+<text x="940.0" y="1039" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">생성 요청 1회</text>
+<line x1="1140" y1="1123" x2="740" y2="1123" stroke="#087F8C" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="740" y1="1123" x2="747.9" y2="1118.69" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<line x1="740" y1="1123" x2="747.9" y2="1127.31" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<rect x="880.655" y="1087" width="118.69" height="27" rx="4" fill="#ECF7F7"/>
+<text x="940.0" y="1109" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">구조화 결과</text>
+<line x1="740" y1="1193" x2="140" y2="1193" stroke="#087F8C" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="140" y1="1193" x2="147.9" y2="1188.69" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<line x1="140" y1="1193" x2="147.9" y2="1197.31" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<rect x="345.46500000000003" y="1157" width="189.07" height="27" rx="4" fill="#ECF7F7"/>
+<text x="440.0" y="1179" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">원래 개인 응답 수정</text>
+<line x1="740" y1="1263" x2="940" y2="1263" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="940" y1="1263" x2="932.1" y2="1267.31" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<line x1="940" y1="1263" x2="932.1" y2="1258.69" stroke="#275DCA" stroke-width="2" stroke-linecap="round"/>
+<rect x="728.55" y="1227" width="222.9" height="27" rx="4" fill="#ECF7F7"/>
+<text x="840.0" y="1249" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">완료 표시 · lease 해제</text>
+<line x1="740" y1="1333" x2="540" y2="1333" stroke="#087F8C" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="540" y1="1333" x2="547.9" y2="1328.69" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<line x1="540" y1="1333" x2="547.9" y2="1337.31" stroke="#087F8C" stroke-width="2" stroke-linecap="round"/>
+<rect x="589.155" y="1297" width="101.69" height="27" rx="4" fill="#ECF7F7"/>
+<text x="640.0" y="1319" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">처리 완료</text>
+<text x="60" y="1418" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">분기는 둘 중 하나를 수행합니다. 오류·시간 제한의 상세 정책은 본문을 참고하세요.</text>
+</svg>

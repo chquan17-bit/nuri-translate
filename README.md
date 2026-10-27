@@ -30,15 +30,7 @@ Nuri는 Discord에서 선택한 글을 번역하고 영어 표현을 연습하�
 
 ## 운영 구조
 
-```mermaid
-flowchart LR
-    D["Discord<br/>선택 메시지 · /nuri"] --> I["공개 ingress<br/>서명 · 시간 · 앱 · 사용자 확인"]
-    I --> Q["Cloud Tasks<br/>OIDC 인증"]
-    Q --> W["비공개 worker<br/>번역 · 연습"]
-    W <--> F[("Firestore<br/>한도 · 중복 방지")]
-    W --> G["Gemini"]
-    W --> R["요청자에게만<br/>Discord 결과"]
-```
+![디스코드 요청부터 비공개 번역 결과까지의 Nuri 전체 구조](docs/assets/architecture-ko.svg)
 
 Cloud Run이 기본 운영 경로입니다. PC를 끄거나 재부팅해도 서비스를 사용할 수 있으며 Windows Gateway 실행기는 복구용으로 유지합니다.
 

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1280 700" role="img" aria-label="Nuri · 请求处理架构">
+<rect x="0" y="0" width="1280" height="700" rx="0" fill="#F7F9FD"/>
+<text x="60" y="55" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="30" font-weight="700" text-anchor="start" fill="#172B4D">Nuri · 请求处理架构</text>
+<text x="60" y="86" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#53657E">快速接收请求，独立执行模型处理，共享用量与重复请求状态。</text>
+<line x1="1080" y1="170" x2="1080" y2="126" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="1080" y1="126" x2="180" y2="126" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="180" y1="126" x2="180" y2="170" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="180" y1="170" x2="175.69" y2="162.1" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="180" y1="170" x2="184.31" y2="162.1" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="541.5" y="97" width="177" height="27" rx="4" fill="#F7F9FD"/>
+<text x="630" y="119" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">修改或追加个人响应</text>
+<line x1="300" y1="230" x2="360" y2="230" stroke="#275DCA" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="360" y1="230" x2="352.1" y2="234.31" stroke="#275DCA" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="360" y1="230" x2="352.1" y2="225.69" stroke="#275DCA" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="600" y1="230" x2="660" y2="230" stroke="#275DCA" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="660" y1="230" x2="652.1" y2="234.31" stroke="#275DCA" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="660" y1="230" x2="652.1" y2="225.69" stroke="#275DCA" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="900" y1="230" x2="960" y2="230" stroke="#275DCA" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="960" y1="230" x2="952.1" y2="234.31" stroke="#275DCA" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="960" y1="230" x2="952.1" y2="225.69" stroke="#275DCA" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="480" y1="290" x2="480" y2="357" stroke="#275DCA" stroke-width="2.1" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="480" y1="357" x2="180" y2="357" stroke="#275DCA" stroke-width="2.1" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="180" y1="357" x2="180" y2="290" stroke="#275DCA" stroke-width="2.1" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="180" y1="290" x2="184.31" y2="297.9" stroke="#275DCA" stroke-width="2.1" stroke-linecap="round"/>
+<line x1="180" y1="290" x2="175.69" y2="297.9" stroke="#275DCA" stroke-width="2.1" stroke-linecap="round"/>
+<rect x="224.5" y="327" width="211" height="27" rx="4" fill="#F7F9FD"/>
+<text x="330" y="349" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#53657E">仅请求者可见的延迟响应</text>
+<line x1="1015" y1="290" x2="1015" y2="415" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="1015" y1="415" x2="780" y2="415" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="780" y1="415" x2="780" y2="470" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="780" y1="470" x2="775.69" y2="462.1" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="780" y1="470" x2="784.31" y2="462.1" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="1015" y1="290" x2="1019.31" y2="297.9" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="1015" y1="290" x2="1010.69" y2="297.9" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="746.64" y="384" width="206.72" height="26" rx="4" fill="#F7F9FD"/>
+<text x="850" y="405" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#53657E">预约 · 限额 · 防止重复</text>
+<line x1="1080" y1="290" x2="1080" y2="470" stroke="#275DCA" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="1080" y1="470" x2="1075.69" y2="462.1" stroke="#275DCA" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="1080" y1="470" x2="1084.31" y2="462.1" stroke="#275DCA" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="1150" y1="470" x2="1150" y2="290" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="1150" y1="290" x2="1154.31" y2="297.9" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="1150" y1="290" x2="1145.69" y2="297.9" stroke="#087F8C" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="1071.0" y="330" width="88" height="47" rx="4" fill="#F7F9FD"/>
+<text x="1115" y="351" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#53657E">所选文本</text>
+<text x="1115" y="372" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#53657E">模型结果</text>
+<rect x="60" y="170" width="240" height="120" rx="12" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<rect x="60" y="170" width="6" height="120" rx="3" fill="#275DCA"/>
+<text x="84" y="206" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#172B4D">Discord</text>
+<text x="84" y="238" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">所选消息 · 直接输入</text>
+<rect x="360" y="170" width="240" height="120" rx="12" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<rect x="360" y="170" width="6" height="120" rx="3" fill="#275DCA"/>
+<text x="384" y="206" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#172B4D">公开 ingress</text>
+<text x="384" y="238" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">校验签名、应用、所有者</text>
+<text x="384" y="263" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">快速接收请求</text>
+<rect x="660" y="170" width="240" height="120" rx="12" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<rect x="660" y="170" width="6" height="120" rx="3" fill="#275DCA"/>
+<text x="684" y="206" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#172B4D">Cloud Tasks</text>
+<text x="684" y="238" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">稳定的 task ID</text>
+<text x="684" y="263" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">通过 OIDC 认证投递</text>
+<rect x="960" y="170" width="240" height="120" rx="12" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<rect x="960" y="170" width="6" height="120" rx="3" fill="#087F8C"/>
+<text x="984" y="206" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#172B4D">私有 worker</text>
+<text x="984" y="238" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">预约 → 生成 → 响应</text>
+<text x="984" y="263" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">通过 IAM 限制访问</text>
+<rect x="660" y="470" width="240" height="120" rx="12" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<rect x="660" y="470" width="6" height="120" rx="3" fill="#087F8C"/>
+<text x="684" y="506" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#172B4D">Firestore</text>
+<text x="684" y="538" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">每日限额 · 共享租约</text>
+<text x="684" y="563" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">基于哈希防止重复</text>
+<rect x="960" y="470" width="240" height="120" rx="12" fill="#FFFFFF" stroke="#D7E1EE" stroke-width="1.4"/>
+<rect x="960" y="470" width="6" height="120" rx="3" fill="#087F8C"/>
+<text x="984" y="506" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#172B4D">Gemini API</text>
+<text x="984" y="538" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">根据所选文本生成</text>
+<text x="984" y="563" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#53657E">不自动重试模型调用</text>
+<line x1="60" y1="468" x2="60" y2="576" stroke="#275DCA" stroke-width="4" stroke-linecap="round"/>
+<text x="82" y="490" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#53657E">仅处理用户明确选择的输入</text>
+<text x="82" y="522" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#53657E">结果仅对请求者可见</text>
+<text x="82" y="554" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#53657E">队列临时保存原文和响应令牌</text>
+<line x1="60" y1="635" x2="1200" y2="635" stroke="#D7E1EE" stroke-width="1" stroke-linecap="round"/>
+<text x="60" y="667" font-family="Segoe UI, Malgun Gothic, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" text-anchor="start" fill="#53657E">公开入口  /  私有任务执行  /  共享用量控制</text>
+</svg>
