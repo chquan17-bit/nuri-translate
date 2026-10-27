@@ -4,7 +4,7 @@
 
 # Nuri · Operations Guide
 
-**Translate selected text, learn useful expressions, and practice with your own sentences.**
+**Translate selected text, learn alternative expressions, and practice with your own sentences.**
 
 Discord · Python 3.13 · Cloud Run · Gemini
 
@@ -12,50 +12,50 @@ Discord · Python 3.13 · Cloud Run · Gemini
 
 ---
 
-Nuri is a personal translation and English learning app for Discord. It processes messages you select or text you enter, and displays results only to the person who requested them. This guide covers everyday use, deployment, and troubleshooting.
+Nuri is a personal translation and English learning app used in Discord. It processes selected messages or manually entered text, and displays the results only to the requester. This Wiki is an operational manual covering everything from usage to deployment and incident response.
 
 > [!NOTE]
-> The [official GitHub Wiki](https://github.com/chquan17-bit/nuri-translate/wiki) provides guides in three languages. Publishing source and documentation does not change bot access or cloud settings. The running bot remains owner-only, and replies remain visible only to the requester.
+> [Official GitHub Wiki](https://github.com/chquan17-bit/nuri-translate/wiki) provides guides in three languages. Making the source code and documentation public does not change bot usage permissions or cloud settings. The running bot can only be used by its owner, and results are displayed only to the requester.
 
-## Start with your task
+## Start with the task you want
 
-| Goal | Guide | What it covers |
+| Purpose | Guide | Key Content |
 |---|---|---|
-| Use Nuri for the first time | [Getting started](Getting-Started-en.md) | Message menus, `/nuri`, sentence practice |
-| Understand request processing | [Architecture](Architecture-en.md) | ingress → queue → worker, duplicate prevention |
-| Check the running system | [Operations](Operations-en.md) | Cost settings, limits, logs, verification |
-| Deploy a version | [Deployment](Deployment-en.md) | Tag → commit → image → both services |
-| Investigate a problem | [Troubleshooting](Troubleshooting-en.md) | Cold starts, limits, signatures, response errors |
-| Understand data handling | [Security and data](Security-en.md) | Credentials, temporary processing, stored data |
+| Get Started | [Getting Started](Getting-Started-en.md) | Message menu, `/nuri`, Single sentence practice |
+| Understand Processing | [Architecture](Architecture-en.md) | ingress → queue → worker, duplicate prevention |
+| Check Status | [Operations](Operations-en.md) | Cost settings, limits, logs, validation |
+| Deploy Version | [Deployment](Deployment-en.md) | Tag → commit → image → two services |
+| Troubleshooting | [Troubleshooting](Troubleshooting-en.md) | Initial startup delay, limits, signatures, response errors |
+| Check Data Boundaries | [Security and Data](Security-en.md) | Secrets, temporary processing, storage scope |
 
-## Three ways to use Nuri
-
-The Discord interface uses the Korean command and button labels shown below.
+## Three Modes of Use
 
 | Feature | Input | Result |
 |---|---|---|
-| **Nuri 번역** — Translate | Selected or manually entered text | Translation → source |
-| **Nuri와 영어 배우기** — Learn English with Nuri | Selected or manually entered text | Translation → up to two reusable expressions → source |
-| **한 문장 써보기** — Try writing a sentence | Text entered through the learning result's button | Corrected sentence → one key explanation → your sentence |
+| **Nuri 번역** | Selected text or directly entered text | Translation → Original text |
+| **Nuri와 영어 배우기** | Selected text or directly entered text | Translation → Up to 2 alternative expressions → Original text |
+| **한 문장 써보기** | Input from learning result button | Corrected sentence → One key explanation → My sentence |
 
-Nuri reads the message body together with the text in card titles, descriptions, and fields. It does not automatically retrieve images, attachment contents, or external pages linked in the message.
+Reads the message body and card titles, descriptions, and item texts together. It does not automatically collect images, attachments, or external pages from links.
 
-## Current operating policy
+## Current Operational Principles
 
-| Area | Policy |
+| Item | Standard |
 |---|---|
-| Runtime | Separate public HTTP ingress and private worker |
-| Access | Verify Discord request signatures; allow only the owner |
-| Service sizing | Both services: request-based billing, minimum 0 / maximum 1 instance, 1 CPU / 512 MiB |
-| Usage | 25 attempts per day, 10 seconds between requests, one model request at a time |
-| Duplicate prevention | Reserve in Firestore before calling the model; never regenerate the same interaction |
-| Releases | Build from a clean annotated-tag checkout; deploy the same image digest to both services |
+| Execution | Separate public HTTP ingress and private worker |
+| Access | Discord request signature verification, owner-only use |
+| Service Size | Both services request-based, min 0 · max 1, CPU 1 · 512 MiB |
+| Usage | 25times/day · 10s between requests · 1concurrent model processing |
+| Duplicate Handling | Model call after Firestore reservation, preventing regeneration of the same interaction |
+| Release | Build from clean source of annotated tag, deploy identical digest to both services |
 
 > [!IMPORTANT]
-> With a minimum of zero instances, the first request after a long idle period can exceed Discord's three-second response deadline while ingress starts. This remains a limitation of the current operating configuration.
+> Minimum instances 0 are maintained, so the first request after a long idle period may exceed Discord's 3s response limit due to startup delay. This is a remaining limitation in current operations.
 
-## Documentation and release records
+## Documentation and Release History
 
-The documentation source is maintained in `docs/wiki/` in the repository. Code defaults and deployed settings are separate: use each release's commit SHA, build ID, image digest, and revision records to identify what was deployed. Examples omit real keys, personal accounts, and cloud project identifiers.
+The original Wiki is managed in the `docs/wiki/` repository. Code defaults and current operational settings are separated, and actual deployment results are verified through release-specific commit SHA, build ID, image digest, and revision records. Document examples do not include actual keys, personal accounts, or cloud project identifiers.
 
-**Next:** [Getting started →](Getting-Started-en.md)
+Modifying the Korean original and reflecting it in `main` causes GitHub Actions to translate the changed text into English and Simplified Chinese and update all three language Wikis together. If translation or link validation fails, the existing Wiki is maintained. For writing locations and re-execution methods, refer to the [Documentation Automation Guide](../WIKI-AUTOMATION.md).
+
+**Next:** [Getting Started →](Getting-Started-en.md)
