@@ -11,9 +11,9 @@
 
 Nuri is a personal Discord app for translation and English practice. It reads text in the selected message, including message cards, and puts translations and corrections first. Replies are visible only to the requester.
 
-[Documentation hub](docs/wiki/Home-en.md) · [Deployment](docs/DEPLOYMENT.md) · [Validation](VALIDATION.md) · [Changelog](CHANGELOG.md)
+[GitHub Wiki](https://github.com/chquan17-bit/nuri-translate/wiki/Home-en) · [Deployment](docs/DEPLOYMENT.md) · [Validation](VALIDATION.md) · [Changelog](CHANGELOG.md)
 
-> Documentation is versioned in this repository. The current GitHub plan does not enable the Wiki tab for this private repository, so the three-language wiki is published under `docs/wiki/`.
+> Korean, English, and Simplified Chinese guides are available in the official GitHub Wiki. Sources are versioned with the code under `docs/wiki/`. Making the source public does not change bot access or cloud settings: the running bot remains owner-only, and replies remain visible only to the requester.
 
 ## From understanding to practice
 

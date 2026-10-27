@@ -15,7 +15,7 @@ Discord · Python 3.13 · Cloud Run · Gemini
 Nuri 是用于 Discord 的个人翻译与英语学习应用。它处理用户选择的消息或直接输入的文本，结果仅对请求者可见。本 Wiki 涵盖日常使用、版本部署和故障排查。
 
 > [!NOTE]
-> 本 Wiki 以仓库内文档的形式提供。当前套餐不支持该私有仓库的 GitHub Wiki 标签页；发布文档时未变更套餐或仓库可见性。
+> [正式 GitHub Wiki](https://github.com/chquan17-bit/nuri-translate/wiki) 提供三种语言的指南。公开源码和文档不会改变机器人访问权限或云配置。运行中的机器人仍仅限所有者使用，回复也仅对请求者可见。
 
 ## 按任务查找
 

@@ -25,9 +25,9 @@ Discord · Python 3.13 · Cloud Run · Gemini
 | [보안과 데이터](Security.md) | [Security and data](Security-en.md) | [安全与数据](Security-zh-CN.md) |
 
 > [!NOTE]
-> **한국어** · 이 문서는 저장소 내 Wiki입니다. 현재 요금제에서는 비공개 GitHub Wiki 탭을 사용할 수 없습니다. 요금제나 공개 범위 변경 없이 이 문서 허브를 제공합니다.  
-> **English** · This Wiki lives in the repository. The current plan does not enable the Wiki tab for this private repository. This documentation hub preserves the existing plan and repository visibility.  
-> **简体中文** · 本 Wiki 位于代码仓库内。当前套餐不支持该私有仓库的 Wiki 标签页。本资料中心保留现有套餐和仓库可见性。
+> **한국어** · [정식 GitHub Wiki](https://github.com/chquan17-bit/nuri-translate/wiki)와 공개 저장소에서 문서를 제공합니다. 소스 공개는 봇 권한과 클라우드 설정을 바꾸지 않으며, 운영 중인 봇과 응답은 소유자 전용으로 유지합니다.  
+> **English** · Documentation is available in the [official GitHub Wiki](https://github.com/chquan17-bit/nuri-translate/wiki) and public repository. Public source does not change bot access or cloud settings; the running bot remains owner-only and its replies remain private.  
+> **简体中文** · 文档已发布到[正式 GitHub Wiki](https://github.com/chquan17-bit/nuri-translate/wiki)及公开仓库。公开源码不会改变机器人访问权限或云配置；运行中的机器人仍仅供所有者使用，回复保持私有。
 
 ## 한눈에 보기 · At a glance · 项目概览
 
@@ -49,8 +49,8 @@ Discord · Python 3.13 · Cloud Run · Gemini
 The source is `docs/wiki/`. Update matching pages in all three languages when behavior, limits, or commands change.  
 源文件位于 `docs/wiki/`。功能、限制或命令变更时，请同步更新三种语言的对应页面。
 
-향후 비공개 Wiki를 사용할 수 있는 환경이 마련되면 별도 Wiki Git 저장소에 이 페이지들을 게시하고, `.md` 상대링크를 Wiki 페이지 slug로 변환합니다. `_Sidebar.md`와 `_Footer.md`를 함께 사용하며 기존 Wiki 내용이 있는지 먼저 확인합니다.  
-If private Wikis become available later, publish these pages to the separate Wiki Git repository, convert relative `.md` links to Wiki page slugs, and include `_Sidebar.md` and `_Footer.md`. Inspect any existing Wiki content first.  
-今后若具备私有 Wiki 功能，可将这些页面发布到独立的 Wiki Git 仓库，将相对 `.md` 链接转换为 Wiki 页面名称，并加入 `_Sidebar.md` 和 `_Footer.md`。请先检查已有 Wiki 内容。
+변경한 원본을 별도 Wiki Git 저장소에 동기화할 때 `.md` 상대링크를 Wiki 페이지 주소로 변환하고 이미지 경로를 확인합니다. `_Sidebar.md`와 `_Footer.md`를 함께 게시하며 기존 Wiki 이력을 보존합니다.  
+When syncing sources to the separate Wiki Git repository, convert relative `.md` links to Wiki page URLs and verify image paths. Publish `_Sidebar.md` and `_Footer.md` alongside the pages, preserving existing Wiki history.  
+将更新后的源文件同步到独立的 Wiki Git 仓库时，请将相对 `.md` 链接转换为 Wiki 页面地址，并检查图片路径。同步发布 `_Sidebar.md` 和 `_Footer.md`，保留已有 Wiki 历史。
 
 </details>

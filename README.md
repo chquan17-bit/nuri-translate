@@ -11,9 +11,9 @@
 
 Nuri는 Discord에서 선택한 글을 번역하고 영어 표현을 연습하는 개인 앱입니다. 메시지 카드에 들어 있는 본문까지 읽고, 번역과 교정을 먼저 보여줍니다. 결과는 요청자에게만 표시됩니다.
 
-[문서·Wiki](docs/wiki/Home-ko.md) · [배포 안내](docs/DEPLOYMENT.md) · [검증 안내](VALIDATION.md) · [변경 기록](CHANGELOG.md)
+[GitHub Wiki](https://github.com/chquan17-bit/nuri-translate/wiki/Home-ko) · [배포 안내](docs/DEPLOYMENT.md) · [검증 안내](VALIDATION.md) · [변경 기록](CHANGELOG.md)
 
-> 문서는 코드와 함께 버전 관리됩니다. 현재 GitHub 요금제에서는 이 비공개 저장소의 Wiki 탭을 사용할 수 없어, 3개 언어 Wiki를 저장소의 `docs/wiki/`에 제공합니다.
+> 한국어·영어·중국어 안내를 정식 GitHub Wiki에서 제공합니다. 문서 원본은 `docs/wiki/`에서 코드와 함께 관리합니다. 소스 공개는 봇 사용 권한이나 클라우드 설정을 바꾸지 않으며, 운영 중인 봇은 소유자만 사용하고 결과도 요청자에게만 표시합니다.
 
 ## 이해에서 연습까지
 

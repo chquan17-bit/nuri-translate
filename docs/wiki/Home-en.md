@@ -15,7 +15,7 @@ Discord · Python 3.13 · Cloud Run · Gemini
 Nuri is a personal translation and English learning app for Discord. It processes messages you select or text you enter, and displays results only to the person who requested them. This guide covers everyday use, deployment, and troubleshooting.
 
 > [!NOTE]
-> This Wiki is provided inside the repository. The private GitHub Wiki tab is restricted on the current plan. Publishing these documents did not require a plan upgrade or a change to repository visibility.
+> The [official GitHub Wiki](https://github.com/chquan17-bit/nuri-translate/wiki) provides guides in three languages. Publishing source and documentation does not change bot access or cloud settings. The running bot remains owner-only, and replies remain visible only to the requester.
 
 ## Start with your task
 

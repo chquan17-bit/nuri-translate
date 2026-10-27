@@ -11,9 +11,9 @@
 
 Nuri 是用于个人翻译和英语练习的 Discord 应用。它读取所选消息及消息卡片中的文字，优先展示译文和修改建议。所有结果仅对发起请求的用户可见。
 
-[文档中心](docs/wiki/Home-zh-CN.md) · [部署说明](docs/DEPLOYMENT.md) · [验证说明](VALIDATION.md) · [更新日志](CHANGELOG.md)
+[GitHub Wiki](https://github.com/chquan17-bit/nuri-translate/wiki/Home-zh-CN) · [部署说明](docs/DEPLOYMENT.md) · [验证说明](VALIDATION.md) · [更新日志](CHANGELOG.md)
 
-> 文档随代码一起进行版本管理。当前 GitHub 套餐不支持此私有仓库的 Wiki 标签页，因此三语 Wiki 发布在仓库内的 `docs/wiki/` 目录。
+> 韩语、英语和简体中文指南已提供在正式 GitHub Wiki 中。文档源文件位于 `docs/wiki/`，与代码一起进行版本管理。公开源码不会改变机器人使用权限或云配置：运行中的机器人仍仅限所有者使用，回复也仅对请求者可见。
 
 ## 从理解到练习
 

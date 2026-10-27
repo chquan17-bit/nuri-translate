@@ -1,25 +1,28 @@
-## Nuri
-
-**번역 · 표현 학습 · 한 문장 연습**
+## Nuri · Knowledge Base
 
 [언어 선택 · Languages · 语言](Home.md)
 
-[한국어](Home-ko.md) · [English](Home-en.md) · [简体中文](Home-zh-CN.md)
+### [한국어](Home-ko.md)
 
-### 사용
+[시작하기](Getting-Started.md) · [구조](Architecture.md)  
+[운영](Operations.md) · [배포](Deployment.md)  
+[문제 해결](Troubleshooting.md) · [보안](Security.md)
 
-- [시작하기](Getting-Started.md)
-- [아키텍처](Architecture.md)
+### [English](Home-en.md)
 
-### 운영
+[Get started](Getting-Started-en.md) · [Architecture](Architecture-en.md)  
+[Operations](Operations-en.md) · [Deploy](Deployment-en.md)  
+[Troubleshooting](Troubleshooting-en.md) · [Security](Security-en.md)
 
-- [운영 기준과 검증](Operations.md)
-- [태그 기반 배포](Deployment.md)
-- [문제 해결](Troubleshooting.md)
-- [보안과 데이터](Security.md)
+### [简体中文](Home-zh-CN.md)
+
+[开始使用](Getting-Started-zh-CN.md) · [系统架构](Architecture-zh-CN.md)  
+[运行维护](Operations-zh-CN.md) · [版本部署](Deployment-zh-CN.md)  
+[故障排查](Troubleshooting-zh-CN.md) · [安全](Security-zh-CN.md)
 
 ---
 
-**운영 기준**  
-min 0 · max 1 · 요청 기반  
-하루 25회 · 10초 간격
+[Repository](https://github.com/chquan17-bit/nuri-translate) · [Releases](https://github.com/chquan17-bit/nuri-translate/releases)
+
+**Runtime** · min 0 / max 1  
+25 requests/day · 10-second cooldown
