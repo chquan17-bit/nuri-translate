@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "model": "gemini-3.5-flash-lite",
+  "translator_version": 1,
+  "prompt_sha256": "cb1b507207fe795a2186818ea039b744ffe0e6741982e768a5006c38933f60ec",
+  "sources": {
+    "docs/assets/architecture-ko.svg": {
+      "source_sha256": "8ed38ee45de1f8414bc8ab387f38bf446d0d2e722e85450b82953e391cd21634",
+      "targets": {
+        "en": {
+          "path": "docs/assets/architecture-en.svg",
+          "sha256": "06e28ba5802ce4c3bf5b1792711014d6bafc08a08362aa35050534540f126450"
+        },
+        "zh-CN": {
+          "path": "docs/assets/architecture-zh-CN.svg",
+          "sha256": "cfa1dbae73108bd5425b484b60fd2d839aa2b189b7cfc6ccf9364e2f87da7334"
+        }
+      }
+    },
+    "docs/assets/sequence-ko.svg": {
+      "source_sha256": "bf53d13415e536bb3c1632acabbd238cfee30e63157413ea796deb83923350fe",
+      "targets": {
+        "en": {
+          "path": "docs/assets/sequence-en.svg",
+          "sha256": "68fac5bd8efaae029bae1b7d809c538d1ef50cc74fcf2d42b73548b7a31fd187"
+        },
+        "zh-CN": {
+          "path": "docs/assets/sequence-zh-CN.svg",
+          "sha256": "b31b961c74a9042ce27cc11cd7371f0f69cea71ed2b2fe770c03aac553c07998"
+        }
+      }
+    },
+    "docs/wiki/Architecture.md": {
+      "source_sha256": "acc275b8b493e5a44c98a723e467ce9bbdc40d14afac6c6dc0bf7e6c2d675877",
+      "targets": {
+        "en": {
+          "path": "docs/wiki/Architecture-en.md",
+          "sha256": "44fe4034ec998556b1c495720aa3a289443044690db96433cdf2f971af91700d"
+        },
+        "zh-CN": {
+          "path": "docs/wiki/Architecture-zh-CN.md",
+          "sha256": "fe5b18d9787fe68baddec71017038dee98e98745a12e81d6538b3c0fefb78c80"
+        }
+      }
+    },
+    "docs/wiki/Deployment.md": {
+      "source_sha256": "058906dbdaa189ba2741344f20603596dea152cb0b91519e2cd9e729fec96f91",
+      "targets": {
+        "en": {
+          "path": "docs/wiki/Deployment-en.md",
+          "sha256": "784b233c833a2fbcd8a0b472b24ab9be75a109b4899e2c9506749be0a0e7df59"
+        },
+        "zh-CN": {
+          "path": "docs/wiki/Deployment-zh-CN.md",
+          "sha256": "bbc4a8aeec749806f200be238aca95e41e526537a9224fe9e6c2230beb824660"
+        }
+      }
+    },
+    "docs/wiki/Getting-Started.md": {
+      "source_sha256": "c05292d77324ca87f9ed737a24f701ae56505b5cef936e481ae1e3195e82a0ba",
+      "targets": {
+        "en": {
+          "path": "docs/wiki/Getting-Started-en.md",
+          "sha256": "ad39278ab50a83772bbb1be7d78f2202dd85ccc1d03e0213caf7616f796794a1"
+        },
+        "zh-CN": {
+          "path": "docs/wiki/Getting-Started-zh-CN.md",
+          "sha256": "1f185a662698f62b73ecea59134dbcbb8bb9485328407aa3e2a43ff55883c650"
+        }
+      }
+    },
+    "docs/wiki/Home-ko.md": {
+      "source_sha256": "2ce232a7f67a645e938a31a5e003b8ea540f019f826bbd6347cf863f3d2db7e7",
+      "targets": {
+        "en": {
+          "path": "docs/wiki/Home-en.md",
+          "sha256": "1bcc1061fa8344685b649594f8aa251b0a67afcab9d7a8ce6de48066d81127b4"
+        },
+        "zh-CN": {
+          "path": "docs/wiki/Home-zh-CN.md",
+          "sha256": "8058287ab2766000e6ca02c4960d776aa12f52c191ad6ef1eb436b031717c0ac"
+        }
+      }
+    },
+    "docs/wiki/Operations.md": {
+      "source_sha256": "e0779d3e2ab65bf0b1ee94fb4ee8361247b2b8a986541dda3aa80ca0a56d0c1e",
+      "targets": {
+        "en": {
+          "path": "docs/wiki/Operations-en.md",
+          "sha256": "76d45127b3c969ed5c17d86d5383ed422060ff4fcdcb7d815fef675cb926a0da"
+        },
+        "zh-CN": {
+          "path": "docs/wiki/Operations-zh-CN.md",
+          "sha256": "7fb90f838e433dac75aadffd01da0874bf9285f162782f95ebd6fedea85e6664"
+        }
+      }
+    },
+    "docs/wiki/Security.md": {
+      "source_sha256": "c7bf6a845135cd2b17f89757d673117f40c03be2528d15f294f70b7063446e59",
+      "targets": {
+        "en": {
+          "path": "docs/wiki/Security-en.md",
+          "sha256": "d6f846c04a1ffd5c4ed0d17ddff2d435b9fd47213a594d06621fb57dc4efff7e"
+        },
+        "zh-CN": {
+          "path": "docs/wiki/Security-zh-CN.md",
+          "sha256": "6813ebf75a8f671f245e2e1876559576364c9604b0aa3c927676cf1e743810e8"
+        }
+      }
+    },
+    "docs/wiki/Troubleshooting.md": {
+      "source_sha256": "5485fbdc8d8f648954073b7f1085a96e17ae4699065736d75f70d01e40eedd1d",
+      "targets": {
+        "en": {
+          "path": "docs/wiki/Troubleshooting-en.md",
+          "sha256": "3a4a53101b3e18c61a604ce3eecbb89cff6c961017132fafd518e11a31d60bde"
+        },
+        "zh-CN": {
+          "path": "docs/wiki/Troubleshooting-zh-CN.md",
+          "sha256": "16183b1604596b994508cf7f263dfd3369f2449b9c4e90a111c5b331281abac6"
+        }
+      }
+    }
+  }
+}

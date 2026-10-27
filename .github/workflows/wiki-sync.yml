@@ -1,0 +1,104 @@
+name: Wiki sync
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    paths:
+      - 'docs/**'
+      - 'scripts/*wiki*.py'
+      - 'tests/test_*wiki*.py'
+      - '.github/workflows/wiki-sync.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wiki-sync-${{ github.event_name == 'pull_request' && github.ref || 'main' }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    name: Offline documentation checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Test translators and Wiki exporter without API access
+        run: python3 -m unittest discover -s tests -p 'test_*wiki*.py' -v
+
+  publish:
+    name: Korean → English / Chinese → Wiki
+    needs: validate
+    if: github.repository == 'chquan17-bit/nuri-translate' && github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      # Always use current main, including when an older run is manually retried.
+      - name: Check out latest document sources
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 0
+          path: source
+      - name: Recheck scripts from latest main
+        working-directory: source
+        run: python3 -m unittest discover -s tests -p 'test_*wiki*.py' -v
+      - name: Translate changed Korean pages and diagram text
+        working-directory: source
+        env:
+          GEMINI_API_KEY: ${{ secrets.WIKI_GEMINI_API_KEY }}
+        run: python3 scripts/translate_wiki.py --root .
+      - name: Record translated sources
+        working-directory: source
+        run: |
+          set -euo pipefail
+          python3 scripts/translate_wiki.py --root . --check
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- docs/wiki docs/assets docs/wiki-translations.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'docs: refresh English and Chinese Wiki translations'
+          fi
+          git fetch origin main
+          git rebase origin/main
+          # A concurrent Korean change requires a fresh run, never stale publication.
+          python3 scripts/translate_wiki.py --root . --check
+          python3 scripts/sync_wiki.py --root . --check
+      - name: Install diagram renderer and Korean/Chinese fonts
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends librsvg2-bin fonts-noto-cjk
+      - name: Check out existing Wiki history
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: ${{ github.repository }}.wiki
+          ref: master
+          path: wiki
+      - name: Prepare Wiki pages, navigation and images
+        run: python3 source/scripts/sync_wiki.py --root source --destination wiki
+      - name: Push generated translations to main
+        working-directory: source
+        run: git push origin HEAD:main
+      - name: Publish Wiki only when content changed
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          source_sha=$(git -C source rev-parse HEAD)
+          git -C wiki config user.name 'github-actions[bot]'
+          git -C wiki config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C wiki add --all
+          if git -C wiki diff --cached --quiet; then
+            printf 'Wiki already matches source %s.\n' "$source_sha" >> "$GITHUB_STEP_SUMMARY"
+          else
+            git -C wiki commit -m "docs: sync Wiki from ${source_sha}" -m "$RUN_URL"
+            git -C wiki push origin HEAD:master
+            printf 'Published Korean, English and Simplified Chinese Wiki from `%s`.\n' "$source_sha" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          printf '\n[Open Wiki](https://github.com/chquan17-bit/nuri-translate/wiki)\n' >> "$GITHUB_STEP_SUMMARY"

@@ -56,4 +56,6 @@ Nuri는 Discord에서 사용하는 개인 번역·영어 학습 앱입니다. �
 
 Wiki의 원본은 저장소 `docs/wiki/`에서 관리합니다. 코드의 기본값과 현재 운영 설정을 구분하고, 실제 배포 결과는 릴리스별 commit SHA·build ID·image digest·revision 기록으로 확인합니다. 문서의 예시에는 실제 키, 개인 계정, 클라우드 프로젝트 식별자를 넣지 않습니다.
 
+한국어 원본을 수정해 `main`에 반영하면 GitHub Actions가 변경된 본문을 영어와 중국어 간체로 번역하고 세 언어 Wiki를 함께 갱신합니다. 번역이나 링크 검증에 실패하면 기존 Wiki를 유지합니다. 작성 위치와 재실행 방법은 [문서 자동화 안내](../WIKI-AUTOMATION.md)를 참고하세요.
+
 **다음:** [시작하기 →](Getting-Started.md)

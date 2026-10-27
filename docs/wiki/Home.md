@@ -45,12 +45,16 @@ Discord · Python 3.13 · Cloud Run · Gemini
 <details>
 <summary>문서 관리 · Maintaining the docs · 文档维护</summary>
 
-문서 원본은 `docs/wiki/`입니다. 기능·한도·명령을 바꾸면 세 언어의 대응 페이지를 함께 갱신합니다.  
-The source is `docs/wiki/`. Update matching pages in all three languages when behavior, limits, or commands change.  
-源文件位于 `docs/wiki/`。功能、限制或命令变更时，请同步更新三种语言的对应页面。
+문서 원본은 `docs/wiki/`입니다. 한국어 본문을 수정해 `main`에 반영하면 GitHub Actions가 영어·중국어를 번역하고 세 언어를 함께 게시합니다.
 
-변경한 원본을 별도 Wiki Git 저장소에 동기화할 때 `.md` 상대링크를 Wiki 페이지 주소로 변환하고 이미지 경로를 확인합니다. `_Sidebar.md`와 `_Footer.md`를 함께 게시하며 기존 Wiki 이력을 보존합니다.  
-When syncing sources to the separate Wiki Git repository, convert relative `.md` links to Wiki page URLs and verify image paths. Publish `_Sidebar.md` and `_Footer.md` alongside the pages, preserving existing Wiki history.  
-将更新后的源文件同步到独立的 Wiki Git 仓库时，请将相对 `.md` 链接转换为 Wiki 页面地址，并检查图片路径。同步发布 `_Sidebar.md` 和 `_Footer.md`，保留已有 Wiki 历史。
+Sources live in `docs/wiki/`. Changes to Korean content on `main` are translated into English and Simplified Chinese, then all three languages are published together by GitHub Actions.
+
+源文件位于 `docs/wiki/`。韩语正文的修改进入 `main` 后，GitHub Actions 会生成英语与简体中文译文，再统一发布三种语言。
+
+번역·링크 검사가 실패하면 기존 Wiki를 유지합니다. 이 홈과 사이드바·푸터는 공통 다국어 메뉴이므로 세 언어를 함께 수정합니다. 설정과 작성 범위는 [Wiki 자동화 안내](../WIKI-AUTOMATION.md)를 확인하세요.
+
+Translation or link validation failures leave the existing Wiki in place. This home, sidebar, and footer are shared multilingual templates; maintain their three languages together. See [Wiki automation](../WIKI-AUTOMATION.md#english) for setup and authoring scope.
+
+翻译或链接检查失败时保留现有 Wiki。本首页、侧栏和页脚是共用多语言模板，请同时维护三种语言。配置与编辑范围见 [Wiki 自动化说明](../WIKI-AUTOMATION.md#简体中文)。
 
 </details>

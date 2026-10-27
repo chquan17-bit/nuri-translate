@@ -6,6 +6,7 @@
 ![Version 0.1.0](https://img.shields.io/badge/version-0.1.0-2563EB)
 ![Discord](https://img.shields.io/badge/Discord-private_replies-5865F2?logo=discord&logoColor=white)
 ![Cloud Run](https://img.shields.io/badge/Cloud_Run-scale_to_zero-4285F4?logo=googlecloud&logoColor=white)
+[![Wiki sync](https://github.com/chquan17-bit/nuri-translate/actions/workflows/wiki-sync.yml/badge.svg)](https://github.com/chquan17-bit/nuri-translate/actions/workflows/wiki-sync.yml)
 
 [한국어](README.md) · **English** · [简体中文](README.zh-CN.md)
 
@@ -14,6 +15,8 @@ Nuri is a personal Discord app for translation and English practice. It reads te
 [GitHub Wiki](https://github.com/chquan17-bit/nuri-translate/wiki/Home-en) · [Deployment](docs/DEPLOYMENT.md) · [Validation](VALIDATION.md) · [Changelog](CHANGELOG.md)
 
 > Korean, English, and Simplified Chinese guides are available in the official GitHub Wiki. Sources are versioned with the code under `docs/wiki/`. Making the source public does not change bot access or cloud settings: the running bot remains owner-only, and replies remain visible only to the requester.
+
+Start documentation changes in the Korean Wiki sources. Changes on `main` are configured to generate English and Simplified Chinese translations and publish all three languages together. See [Wiki automation](docs/WIKI-AUTOMATION.md#english) for credential setup and authoring scope.
 
 ## From understanding to practice
 

@@ -6,6 +6,7 @@
 ![Version 0.1.0](https://img.shields.io/badge/version-0.1.0-2563EB)
 ![Discord](https://img.shields.io/badge/Discord-private_replies-5865F2?logo=discord&logoColor=white)
 ![Cloud Run](https://img.shields.io/badge/Cloud_Run-scale_to_zero-4285F4?logo=googlecloud&logoColor=white)
+[![Wiki sync](https://github.com/chquan17-bit/nuri-translate/actions/workflows/wiki-sync.yml/badge.svg)](https://github.com/chquan17-bit/nuri-translate/actions/workflows/wiki-sync.yml)
 
 **한국어** · [English](README.en.md) · [简体中文](README.zh-CN.md)
 
@@ -14,6 +15,8 @@ Nuri는 Discord에서 선택한 글을 번역하고 영어 표현을 연습하�
 [GitHub Wiki](https://github.com/chquan17-bit/nuri-translate/wiki/Home-ko) · [배포 안내](docs/DEPLOYMENT.md) · [검증 안내](VALIDATION.md) · [변경 기록](CHANGELOG.md)
 
 > 한국어·영어·중국어 안내를 정식 GitHub Wiki에서 제공합니다. 문서 원본은 `docs/wiki/`에서 코드와 함께 관리합니다. 소스 공개는 봇 사용 권한이나 클라우드 설정을 바꾸지 않으며, 운영 중인 봇은 소유자만 사용하고 결과도 요청자에게만 표시합니다.
+
+문서 수정은 한국어 Wiki 원본에서 시작합니다. `main`에 반영하면 변경된 내용을 영어·중국어로 번역하고 세 언어 Wiki를 함께 갱신하도록 구성되어 있습니다. 최초 자격 증명 설정과 작성 범위는 [Wiki 자동화 안내](docs/WIKI-AUTOMATION.md)를 참고하세요.
 
 ## 이해에서 연습까지
 

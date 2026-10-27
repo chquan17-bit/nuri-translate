@@ -6,6 +6,7 @@
 ![Version 0.1.0](https://img.shields.io/badge/version-0.1.0-2563EB)
 ![Discord](https://img.shields.io/badge/Discord-private_replies-5865F2?logo=discord&logoColor=white)
 ![Cloud Run](https://img.shields.io/badge/Cloud_Run-scale_to_zero-4285F4?logo=googlecloud&logoColor=white)
+[![Wiki sync](https://github.com/chquan17-bit/nuri-translate/actions/workflows/wiki-sync.yml/badge.svg)](https://github.com/chquan17-bit/nuri-translate/actions/workflows/wiki-sync.yml)
 
 [한국어](README.md) · [English](README.en.md) · **简体中文**
 
@@ -14,6 +15,8 @@ Nuri 是用于个人翻译和英语练习的 Discord 应用。它读取所选消
 [GitHub Wiki](https://github.com/chquan17-bit/nuri-translate/wiki/Home-zh-CN) · [部署说明](docs/DEPLOYMENT.md) · [验证说明](VALIDATION.md) · [更新日志](CHANGELOG.md)
 
 > 韩语、英语和简体中文指南已提供在正式 GitHub Wiki 中。文档源文件位于 `docs/wiki/`，与代码一起进行版本管理。公开源码不会改变机器人使用权限或云配置：运行中的机器人仍仅限所有者使用，回复也仅对请求者可见。
+
+修改文档时，请先编辑韩语 Wiki 原稿。工作流会根据 `main` 上的变更生成英语和简体中文译文，再统一发布三种语言。首次密钥配置与编辑范围见 [Wiki 自动化说明](docs/WIKI-AUTOMATION.md#简体中文)。
 
 ## 从理解到练习
 
